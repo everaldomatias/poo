@@ -6,14 +6,14 @@
 class Caneta {
 	
 	// Atributos
-	var $modelo;
-	var $cor;
-	var $ponta;
-	var $carga;
-	var $tampada;
+	public $modelo;
+	public $cor;
+	private $ponta;
+	protected $carga;
+	protected $tampada;
 	
 	// Métodos
-	function rabiscar() {
+	public function rabiscar() {
 		if ( $this->tampada == true ) {
 			echo "<p>Erro! Não posso rabiscar</p>";
 		} else {
@@ -21,11 +21,11 @@ class Caneta {
 		}
 	}
 
-	function tampar() {
+	public function tampar() {
 		$this->tampada = true;
 	}
 
-	function destampar() {
+	public function destampar() {
 		$this->tampada = false;
 	}
 
